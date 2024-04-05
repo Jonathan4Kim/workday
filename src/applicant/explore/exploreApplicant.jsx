@@ -1,7 +1,7 @@
 
 
 import { useState } from 'react';
-
+import {Link} from 'react-router-dom';
 import Shell from '../components/shell';
 
 import JobRow from './components/jobRow';
@@ -69,7 +69,7 @@ export default function ExploreApplicant() {
                                 </div>
                                 <div className='grid grid-cols-2 divide-x divide-solid'>
                                     <div className="col-span-full flex justify-center mb-3">
-                                        <button className='text-blue-700 border border-blue-700 py-2 px-8 rounded-2xl'>Apply</button>
+                                        <Link to={`/jobprofile`} className='text-blue-700 border border-blue-700 py-2 px-8 rounded-2xl'>Apply</Link>
                                     </div>
                                     <div className="col-span-1">
                                         <button className='bg-blue-700 text-white w-full py-5'>Save</button>

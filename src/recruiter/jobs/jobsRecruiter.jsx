@@ -50,15 +50,15 @@ export default function JobsRecruiter() {
                                 <div className='grow flex flex-col px-3 p-2'>
                                     <h1 className='grow-0 text-3xl font-regular py-2 text-blue-700'>{jobs[selected].title}</h1>
                                     <p className=' grow-0 text-md' style={{ 'fontWeight': '500' }}>{jobs[selected].location}</p>
-                                    <div className="grow grid grid-cols-2 h-full border border-blue-700 divide-x divide-solid">
+                                    <div className="grow grid grid-cols-2 h-full border border-blue-700 rounded-2xl divide-x divide-solid">
                                         <div className="col-span-1 ">
-                                            <table className="min-w-full divide-y divide-gray-300 grow-0">
-                                                <thead className="bg-gray-50">
-                                                    <tr>
+                                            <table className="min-w-full divide-y divide-gray-300 grow-0 rounded-2xl overflow-hidden">
+                                                <thead className="bg-gray-50 rounded-2xl overflow-hidden">
+                                                    <tr className='rounded-2xl'>
                                                         <th scope="col" className="py-3.5 pl-4 pr-3 text-left text-sm font-thin text-gray-900 sm:pl-6">
                                                             Name
                                                         </th>
-                                                        <th scope="col" className="px-3 py-3.5 text-left text-sm font-thin text-gray-900" style={{'width': '5rem'}}>
+                                                        <th scope="col" className="px-3 py-3.5 text-left text-sm font-thin text-gray-900" style={{ 'width': '5rem' }}>
                                                             School
                                                         </th>
                                                         <th scope="col" className="px-3 py-3.5 text-left text-sm font-thin text-gray-900">
@@ -96,18 +96,34 @@ export default function JobsRecruiter() {
                                             {selectedApplicant === null ?
                                                 <div className='flex justify-center items-center h-full'>No applicant selected</div>
                                                 :
-                                                <div className='p-3'>
-                                                    <h2 className='text-2xl font-regular'> {selectedApplicant.name} </h2>
-                                                    <div className="flex flex-col gap-y-3">
-                                            <div className="">
-                                                <p className='text-sm' style={{ 'fontWeight': '600' }}>Name</p>
-                                                <p className='text-sm' style={{ 'fontWeight': '500' }}>Haley Kang</p>
-                                            </div>
-                                            <div className="">
-                                                <p className='text-sm' style={{ 'fontWeight': '600' }}>Skills</p>
-                                                <p className='text-sm' style={{ 'fontWeight': '500' }}>MATLAB, Python, CAD</p>
-                                            </div>
-                                        </div>
+                                                <div className='p-3 flex flex-col justify-between h-full'>
+                                                    <div>
+                                                        <h2 className='text-2xl font-regular mb-3'> {selectedApplicant.name} </h2>
+                                                        <div className="flex flex-col gap-y-3">
+                                                            <div className="">
+                                                                <p className='text-sm' style={{ 'fontWeight': '600' }}>Skills</p>
+                                                                <p className='text-sm' style={{ 'fontWeight': '500' }}>MATLAB, Python, CAD</p>
+                                                            </div>
+                                                            <div className="">
+                                                                <p className='text-sm' style={{ 'fontWeight': '600' }}>GPA</p>
+                                                                <p className='text-sm' style={{ 'fontWeight': '500' }}>{selectedApplicant.gpa}</p>
+                                                            </div>
+                                                            <div className="">
+                                                                <p className='text-sm' style={{ 'fontWeight': '600' }}>Degree</p>
+                                                                <p className='text-sm' style={{ 'fontWeight': '500' }}>BSE</p>
+                                                            </div>
+                                                            <div className="">
+                                                                <p className='text-sm' style={{ 'fontWeight': '600' }}>Major</p>
+                                                                <p className='text-sm' style={{ 'fontWeight': '500' }}>{selectedApplicant.major}</p>
+                                                            </div>
+
+                                                            <div className="">
+                                                                <p className='text-sm' style={{ 'fontWeight': '600' }}>Why</p>
+                                                                <p className='text-sm' style={{ 'fontWeight': '500' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Libero justo laoreet sit amet cursus sit amet. Quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit. Amet consectetur adipiscing elit pellentesque.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button className='text-blue-700 border border-blue-700 py-2 px-8 rounded-2xl'>Contact Applicant</button>
                                                 </div>}
 
                                         </div>
@@ -117,6 +133,7 @@ export default function JobsRecruiter() {
 
                                 </div>
                                 <div className='grid grid-cols-2 divide-x divide-solid'>
+
                                     <div className="col-span-1">
                                         <button className='bg-blue-700 text-white w-full py-5'>Contact Recruiter</button>
                                     </div>
