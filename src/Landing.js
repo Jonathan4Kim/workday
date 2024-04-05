@@ -8,6 +8,8 @@ import {
   } from '@heroicons/react/20/solid'
   import { UserCircleIcon, WrenchScrewdriverIcon, UsersIcon } from '@heroicons/react/24/outline'
   import { Link } from 'react-router-dom';
+
+  import { useNavigate } from 'react-router-dom';
   
   const primaryFeatures = [
     {
@@ -150,6 +152,7 @@ import {
   }
   
   export default function Example() {
+    const navigate = useNavigate();
     return (
       <div className="bg-blue-950">
         <main>
@@ -215,7 +218,7 @@ import {
 
                 <div className="mt-10 flex items-center gap-x-6">
                   <a
-                    href="#"
+                    href="/signin"
                     className="rounded-md bg-orange-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-400"
                   >
                     Sign Up/Log in
