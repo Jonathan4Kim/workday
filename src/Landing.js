@@ -218,12 +218,19 @@ import {
 
                 <div className="mt-10 flex items-center gap-x-6">
                   <a
-                    href="/signin"
+                    href="/signin/applicant"
                     className="rounded-md bg-orange-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-400"
                   >
-                    Sign Up/Log in
+                    Applicant Sign Up/Log in
+                  </a>
+                  <a
+                    href="/signin/recruiter"
+                    className="rounded-md bg-orange-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-400"
+                  >
+                    Recruiter Sign Up/Log in
                   </a>
                 </div>
+              
               </div>
               <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
                 <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">

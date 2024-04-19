@@ -33,7 +33,7 @@ export default function Shell({ children }) {
                 </ul>
             </nav>
             <div className="flex flex-col w-full">
-                <h1 className="bg-blue-700 text-white text-2xl font-semibold w-full h-20 self-center content-center px-8">Welcome Back, Haley</h1>
+                <h1 className="bg-blue-800 text-white text-2xl font-semibold w-full h-20 self-center content-center px-8">Welcome Back, Haley</h1>
                 {children}
             </div>
             
